@@ -23,7 +23,7 @@ class Solution
 {
     public:
     //Function to check whether a Binary Tree is BST or not.
-    bool solve(Node* root , int min ,int max){
+    int solve(Node* root , int min ,int max){
         
          if(root==NULL) return 1;
          if(root->data<=min || root->data >=max) return 0;
@@ -33,7 +33,6 @@ class Solution
     {
         
          return solve(root, INT_MIN ,INT_MAX);
-        
     }
 };
 
