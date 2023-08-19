@@ -10,18 +10,19 @@ public:
 	// Function returns the second
 	// largest elements
 	int print2largest(int arr[], int n) {
-	    int max1=-1;
-	    int max2=-1;
-	    for(int i=0;i<n;i++){
-	        if(arr[i]>max1){
-	            max2=max1;
-	            max1=arr[i];
-	        }
-	        if(arr[i]<max1 && arr[i]>max2){
-	            max2=arr[i];
+	    int largest = arr[0];
+	    for(int i=0; i<n; i++){
+	        if(arr[i] > largest){
+	            largest = arr[i];
 	        }
 	    }
-	    return max2;
+	    int slargest = -1;
+	    for(int i=0; i<n; i++){
+	        if(arr[i] > slargest && arr[i] < largest){
+	            slargest = arr[i];
+	        }
+	    }
+	    return slargest;
 	}
 };
 
